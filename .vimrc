@@ -12,6 +12,7 @@ set noshowmode
 set hlsearch
 set incsearch
 set cursorline
+set showcmd	" show the number of characters in selection in visual mode
 
 let g:rustfmt_autosave = 1
 
