@@ -8,6 +8,7 @@ syntax on
 
 set number
 set statusline=2
+set laststatus=2
 set noshowmode
 set hlsearch
 set incsearch
