@@ -13,6 +13,7 @@ set hlsearch
 set incsearch
 set cursorline
 set showcmd
+set tabstop=4
 
 let g:rustfmt_autosave = 1
 
@@ -43,6 +44,10 @@ colorscheme wombat256mod
 " Coc inlay hint color
 " https://stackoverflow.com/questions/71198499/change-the-color-of-the-type-/int-in-coc-nvims-rust-analyzer
 hi CocInlayHint ctermbg=238 ctermfg=178 guibg=gray27 guifg=gold3 
+
+hi Normal guibg=NONE ctermbg=NONE
+
+let mapleader = " "
 
 """ =========================================== Coc settings =======================================================
 
@@ -110,6 +115,13 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Show documentation on hover(not recommended)
+" https://github.com/neoclide/coc.nvim/issues/869#issuecomment-979283481
+" autocmd CursorHold * silent call CocActionAsync('doHover')
+" https://github.com/neoclide/coc.nvim/issues/869#issuecomment-979300661
+" autocmd CursorHold * silent call <SID>show_documentation()
+
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
