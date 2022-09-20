@@ -59,6 +59,10 @@ set hidden
 set nobackup
 set nowritebackup
 
+set backupdir=~/tmp,.
+set directory=~/tmp,.
+set undodir=~/tmp,.
+
 " Better display for messages
 set cmdheight=2
 
