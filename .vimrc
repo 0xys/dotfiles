@@ -15,6 +15,8 @@ set incsearch
 set cursorline
 set showcmd
 set tabstop=4
+set shiftwidth=4
+set expandtab
 
 let g:rustfmt_autosave = 1
 
