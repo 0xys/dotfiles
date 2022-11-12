@@ -15,3 +15,14 @@ https://github.com/nvm-sh/nvm
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
+
+## powerline-go
+- prerequisite: install go
+- powerline-go:  `go install github.com/justjanne/powerline-go@latest`
+- powerline fonts
+```
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+```
+- choose `Source Code Pro for Powerline`
