@@ -29,3 +29,4 @@ cd fonts
 
 ## tmux
 - tmux session uses login shell thus `.bash_profile` is sourced instead of `.bash_profile`. https://unix.stackexchange.com/questions/320465/new-tmux-sessions-do-not-source-bashrc-file
+- `tmux source-file .tmux.conf
