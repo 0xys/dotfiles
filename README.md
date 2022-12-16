@@ -30,3 +30,18 @@ cd fonts
 ## tmux
 - tmux session uses login shell thus `.bash_profile` is sourced instead of `.bash_profile`. https://unix.stackexchange.com/questions/320465/new-tmux-sessions-do-not-source-bashrc-file
 - `tmux source-file .tmux.conf
+
+## vim coc
+```
+:CocList extension
+:CocConfig
+:CocInstall <extension>
+```
+- config: https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file
+
+### language server
+https://github.com/neoclide/coc.nvim/wiki/Language-servers#go
+```
+:CocInstall coc-go
+:CocInstall coc-rust-analyzer
+```
