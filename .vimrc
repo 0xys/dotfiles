@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'tpope/vim-fugitive'
+  Plug 'preservim/nerdtree'
+  Plug 'jistr/vim-nerdtree-tabs'
 call plug#end()
 
 syntax on
@@ -155,6 +157,8 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+nmap <leader>n <plug>NERDTreeTabsToggle<CR>
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 
