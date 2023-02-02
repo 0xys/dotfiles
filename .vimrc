@@ -6,9 +6,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'preservim/nerdtree'
   Plug 'jistr/vim-nerdtree-tabs'
+
+  " highlight
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 syntax on
+
+set encoding=UTF-8
+
+" https://github.com/ryanoasis/nerd-fonts#single-font
+set guifont=Hack
 
 set number
 set statusline=2
