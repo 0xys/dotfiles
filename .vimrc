@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
   " highlight
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 syntax on
@@ -34,6 +35,7 @@ set showcmd
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set background=dark
 
 let g:rustfmt_autosave = 1
 
@@ -56,10 +58,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat'
+      \ 'colorscheme': 'PaperColor'
       \ }
 
-colorscheme wombat256mod
+colorscheme PaperColor
 
 " Coc inlay hint color
 " https://stackoverflow.com/questions/71198499/change-the-color-of-the-type-/int-in-coc-nvims-rust-analyzer
