@@ -44,4 +44,5 @@ https://github.com/neoclide/coc.nvim/wiki/Language-servers#go
 ```
 :CocInstall coc-go
 :CocInstall coc-rust-analyzer
+:CocInstall coc-clangd
 ```
