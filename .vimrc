@@ -219,6 +219,9 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "fzf rg Search
 nnoremap <leader>f :Rg<CR>
 
+"nerdtree
+let NERDTreeShowHidden=1 
+
 " go-vim highlighting
 " https://github.com/fatih/vim-go/wiki/Tutorial#beautify-it
 let g:go_highlight_types = 1
