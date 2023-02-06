@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
   "productivity
   Plug 'preservim/nerdtree'
   Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
