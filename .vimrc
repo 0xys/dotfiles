@@ -1,6 +1,10 @@
+let g:ale_disable_lsp = 1 " need it before plug-in is loaded https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together
+
 call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
-  Plug 'itchyny/lightline.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'tpope/vim-fugitive'
@@ -11,11 +15,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'dense-analysis/ale'
 
   " highlight
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'NLKNguyen/papercolor-theme'
+
+  " workaround to fix bdelete issue on tabline with nerdtree
+  " https://github.com/preservim/nerdtree/issues/400
+  Plug 'qpkorr/vim-bufkill'
 call plug#end()
 
 syntax on
@@ -229,4 +238,28 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
+
+" airline
+let g:airline_theme = 'simple'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_powerline_fonts = 1
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
+
+" C-x to close tabline
+map <C-x> :BD<cr>
+
+" ale 
+" C-j to move to next error
+" C-k to move to prev error
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+let g:airline#extensions#ale#enabled = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1 
+let g:ale_open_list = 1
+
+" workaround to un-highlight quickfix line
+hi QuickFixLine guibg=#303030
 
