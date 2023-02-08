@@ -244,7 +244,7 @@ let g:airline_theme = 'simple'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
-nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-m> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
 
 " C-x to close tabline
