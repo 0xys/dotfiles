@@ -19,13 +19,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ## powerline-go
 - prerequisite: install go
 - powerline-go:  `go install github.com/justjanne/powerline-go@latest`
-- powerline fonts
-```
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-```
-- choose `Source Code Pro for Powerline`
+
+## fonts
+https://github.com/ryanoasis/nerd-fonts
+- install `Hack Nerd Font``
 
 ## tmux
 - tmux session uses login shell thus `.bash_profile` is sourced instead of `.bash_profile`. https://unix.stackexchange.com/questions/320465/new-tmux-sessions-do-not-source-bashrc-file
