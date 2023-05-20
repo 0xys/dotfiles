@@ -5,8 +5,8 @@ export LSCOLORS=ExGxBxDxCxEEgEdxbxgxcxd
 
 # go
 export GOPATH="$HOME/go"
-export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # powerline-go
 function _update_ps1() {
@@ -20,6 +20,20 @@ function _update_ps1() {
     #set "?"
 }
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+. "$HOME/.cargo/env"
+
