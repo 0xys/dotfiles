@@ -46,6 +46,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set background=dark
+set mouse=a
 
 let g:rustfmt_autosave = 1
 
