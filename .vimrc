@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'NLKNguyen/papercolor-theme'
+  Plug 'tomasiser/vim-code-dark'
 
   " workaround to fix bdelete issue on tabline with nerdtree
   " https://github.com/preservim/nerdtree/issues/400
@@ -46,7 +47,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set background=dark
-set mouse=a
+set mouse=a "enable scrolling with the mouse wheel on all mode. set 'n' to enable only on normal mode 
 
 let g:rustfmt_autosave = 1
 
@@ -72,7 +73,7 @@ let g:lightline = {
       \ 'colorscheme': 'PaperColor'
       \ }
 
-colorscheme PaperColor
+colorscheme codedark
 
 " Coc inlay hint color
 " https://stackoverflow.com/questions/71198499/change-the-color-of-the-type-/int-in-coc-nvims-rust-analyzer
@@ -263,4 +264,3 @@ let g:ale_open_list = 1
 
 " workaround to un-highlight quickfix line
 hi QuickFixLine guibg=#303030
-
