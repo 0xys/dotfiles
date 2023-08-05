@@ -18,6 +18,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ## powerline-go
 - prerequisite: install go
+- `ln -s /usr/bin/go /usr/local/go/bin/go` if necessary.
 - powerline-go:  `go install github.com/justjanne/powerline-go@latest`
 
 ## fonts
