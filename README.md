@@ -23,7 +23,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ## fonts
 https://github.com/ryanoasis/nerd-fonts
-- install `Hack Nerd Font``
+- install `Hack Nerd Font`
 
 ## tmux
 - tmux session uses login shell thus `.bash_profile` is sourced instead of `.bash_profile`. https://unix.stackexchange.com/questions/320465/new-tmux-sessions-do-not-source-bashrc-file
