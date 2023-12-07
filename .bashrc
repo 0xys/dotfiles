@@ -147,3 +147,8 @@ function _update_ps1() {
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+
+# go to repository
+gor() {
+    id="$(find ~/code/0xys ~/code/repo ~/code/misc -maxdepth 1 -type d | fzf)"; [ -n "$id" ] && cd "$id"
+}
