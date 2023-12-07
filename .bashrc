@@ -150,5 +150,33 @@ fi
 
 # go to repository
 gor() {
-    id="$(find ~/code/0xys ~/code/repo ~/code/misc -maxdepth 1 -type d | fzf)"; [ -n "$id" ] && cd "$id"
+    local name=$1
+    local url=$2
+
+    if [ -n "$name" ]; then
+        if [ !  -n "$url" ]; then
+            echo "specify repository url. Usage: ttt <name> <url>"
+            return
+        fi
+    else
+        id="$(find ~/code/0xys ~/code/repo ~/code/misc -maxdepth 1 -type d | fzf)"; [ -n "$id" ] && cd "$id"
+        return
+    fi
+    
+    org=public
+    if grep -q "github.com/0xys/" <<< "$url"; then
+        dir=$HOME/code/0xys/$name
+        git clone "$url" $dir 
+        cd $dir
+    else
+        if grep -q "github.com/aaaaa/" <<< "$url"; then
+            echo $name $url $org
+            return
+        fi
+        dir=$HOME/code/repo/$name
+        git clone "$url" $dir 
+        cd $dir
+    fi
+
+
 }
