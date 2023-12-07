@@ -155,7 +155,7 @@ gor() {
 
     if [ -n "$name" ]; then
         if [ !  -n "$url" ]; then
-            echo "specify repository url. Usage: ttt <name> <url>"
+            echo "specify repository url. Usage: gor <name> <url>"
             return
         fi
     else
