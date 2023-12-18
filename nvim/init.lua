@@ -92,7 +92,7 @@ require("lazy").setup({
   {dir = '~/Documents/plugins/first-plugin'},
 
   -- highlight
-  {'danilamihailov/beacon.nvim'},
+  {'0xys/beacon.nvim'},
 })
 
 -- tokyonight
