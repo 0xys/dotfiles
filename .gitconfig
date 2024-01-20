@@ -1,0 +1,37 @@
+[user]
+    name = 0xys
+    email = <CHANGE_ME>
+[core]
+    editor = vim
+    pager = delta
+[url "ssh://git@github.com/0xys/"]
+    insteadOf = https://github.com/0xys/
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[delta]
+    features = deltacolor
+	line-numbers = true
+	keep-plus-minus-markers = true
+	tabs = 4
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[delta "deltacolor"]
+    commit-decoration-style = bold box ul
+    dark = true
+    file-decoration-style = none
+    file-style = omit
+    hunk-header-decoration-style = "#52739e" box ul
+    hunk-header-file-style = "#aedcf2" bold
+    hunk-header-line-number-style = bold "#00aa00"
+    hunk-header-style = file line-number syntax
+    line-numbers = true
+    line-numbers-left-style = "#52739e"
+    line-numbers-minus-style = "#eb4034" bold
+    line-numbers-plus-style = "#00aa00" bold
+    line-numbers-right-style = "#52739e"
+    line-numbers-zero-style = "#999999"
+    minus-emph-style = normal "#852d46"
+    minus-style = normal "#381a22"
+    plus-emph-style = syntax "#376b50"
+    plus-style = syntax "#183327"
+    syntax-theme = Nord
