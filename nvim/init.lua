@@ -98,3 +98,7 @@ require("lazy").setup({
 -- tokyonight
 vim.cmd[[colorscheme tokyonight]]
 
+local opts = { noremap = true, silent = true }
+local keyset = vim.keymap.set
+keyset('n', '<leader> ', '<C-w><C-w>', opts)
+keyset('n', '<leader><CR>', ':vsp<CR>', opts)
