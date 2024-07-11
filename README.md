@@ -57,3 +57,13 @@ https://github.com/neoclide/coc.nvim/wiki/Language-servers#go
 :CocInstall coc-rust-analyzer
 :CocInstall coc-clangd
 ```
+
+### git
+```sh
+open https://github.com/dandavison/delta/releases
+# download latest version
+
+cd ~/Downloads
+tar -xzvf delta-0.17.0-x86_64-unknown-linux-gnu.tar.gz
+cp ~/Downloads/delta-0.17.0-x86_64-unknown-linux-gnu/delta /usr/local/bin/
+```
