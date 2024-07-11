@@ -68,6 +68,10 @@ tar -xzvf delta-0.17.0-x86_64-unknown-linux-gnu.tar.gz
 cp ~/Downloads/delta-0.17.0-x86_64-unknown-linux-gnu/delta /usr/local/bin/
 ```
 
+# tools
+ripgrep: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
+fzf: https://github.com/junegunn/fzf?tab=readme-ov-file#installation
+
 # neovim
 https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package
 ```sh
@@ -78,4 +82,8 @@ chmod u+x nvim.appimage
 ```sh
 mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
+```
+plugin
+```
+cp -r nvim ~/.config/
 ```
