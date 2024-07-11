@@ -132,6 +132,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"
 export PATH=$PATH:$(go env GOPATH)/bin
 
+# nvim
+export PATH="$PATH:/opt/nvim/"
+
 # powerline-go
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -hostname-only-if-ssh -cwd-mode semifancy -cwd-max-depth 3)"
@@ -160,13 +163,13 @@ gor() {
             return
         fi
     else
-        id="$(find ~/code/0xys ~/code/repo ~/code/misc -maxdepth 1 -type d | fzf)"; [ -n "$id" ] && cd "$id"
+        id="$(find ~/code/personal ~/code/repo ~/code/misc -maxdepth 1 -type d | fzf)"; [ -n "$id" ] && cd "$id"
         return
     fi
     
     org=public
-    if grep -q "github.com/0xys/" <<< "$url"; then
-        dir=$HOME/code/0xys/$name
+    if grep -q "github.com/personal/" <<< "$url"; then
+        dir=$HOME/code/personal/$name
         git clone "$url" $dir 
         cd $dir
     else

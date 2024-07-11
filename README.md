@@ -67,3 +67,15 @@ cd ~/Downloads
 tar -xzvf delta-0.17.0-x86_64-unknown-linux-gnu.tar.gz
 cp ~/Downloads/delta-0.17.0-x86_64-unknown-linux-gnu/delta /usr/local/bin/
 ```
+
+# neovim
+https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package
+```sh
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+```
+```sh
+mkdir -p /opt/nvim
+mv nvim.appimage /opt/nvim/nvim
+```
