@@ -128,9 +128,9 @@ export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEEgEdxbxgxcxd
 
 # go
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"
 export PATH=$PATH:$(go env GOPATH)/bin
-export PATH=$PATH:/usr/local/go/bin
 
 # powerline-go
 function _update_ps1() {
@@ -147,6 +147,7 @@ function _update_ps1() {
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+. "$HOME/.cargo/env"
 
 # go to repository
 gor() {
