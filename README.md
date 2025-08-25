@@ -94,9 +94,11 @@ cp ~/Downloads/delta-0.17.0-x86_64-unknown-linux-gnu/delta /usr/local/bin/
 ```
 
 # tools
-ripgrep: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
-
-fzf: https://github.com/junegunn/fzf?tab=readme-ov-file#installation
+* ripgrep: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
+* fzf: https://github.com/junegunn/fzf?tab=readme-ov-file#installation
+* direnv: `brew install direnv` https://direnv.net/docs/installation.html
+  * add `eval "$(direnv hook zsh)"` to .zshrc
+* history search: https://github.com/zsh-users/zsh-history-substring-search
 
 # neovim
 https://github.com/neovim/neovim/blob/master/INSTALL.md#appimage-universal-linux-package

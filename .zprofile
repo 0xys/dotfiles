@@ -1,4 +1,4 @@
-source ~/.zsh/.secret.sh
+# source ~/.zsh/.secret.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export GOPATH=$HOME/go
@@ -30,3 +30,10 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     install_powerline_precmd
 fi
 
+# color ls command
+alias ls='ls -G'
+export CLICOLOR=1
+export LSCOLORS=gxFxCxDxBxegedabagaced
+
+# delta https://dandavison.github.io/delta/tips-and-tricks/24-bit-color-truecolor.html
+export COLORTERM=truecolor
